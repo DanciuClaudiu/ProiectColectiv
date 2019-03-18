@@ -40,11 +40,11 @@ namespace ProiectColectiv.Controllers
         [HttpPost]
         public ActionResult<User> Login(User user )
         {
-            //if(user.Username.Equals("admin") && user.Password.Equals("admin"))
-            //{
+            if (user.Username.Equals("admin") && user.Password.Equals("admin"))
+            {
                 return UserMap();
-            //}
-            //return BadRequest("Sugi Pula");
+            }
+            return BadRequest("sugi pula");
         }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
