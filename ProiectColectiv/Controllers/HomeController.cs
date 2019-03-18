@@ -19,33 +19,39 @@ namespace ProiectColectiv.Controllers
         {
             return View();
         }
+
         public IActionResult Register()
         {
             return View();
         }
-        public ActionResult UserMap( )
+
+        public ActionResult UserMap(User user)
         {
-            return View("UserMap");
+            return View(user);
         }
+
         public IActionResult AdminMap()
         {
             return View();
         }
+
         [HttpGet]
         public ActionResult<User> Login()
         {
             var user=new User();
             return View(user);
         }
+
         [HttpPost]
         public ActionResult<User> Login(User user )
         {
             if (user.Username.Equals("admin") && user.Password.Equals("admin"))
             {
-                return UserMap();
+                return RedirectToAction("UserMap", user);
             }
-            return BadRequest("sugi pula");
+            return BadRequest("Bad Login.");
         }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
