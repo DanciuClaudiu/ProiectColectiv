@@ -1,0 +1,37 @@
+﻿body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.bg {
+    background-image: url(../resources/map.jpg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.button {
+    position: absolute;
+    background-color: green;
+    font-size: 16px;
+    padding: 12px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.unu {
+    top: 15%;
+    left: 63%;
+}
+
+.doi {
+    top: 45%;
+    left: 43%;
+}
+
+.trei {
+    top: 66%;
+    left: 80%;
+}
