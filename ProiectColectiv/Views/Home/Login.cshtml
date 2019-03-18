@@ -9,43 +9,31 @@
     <meta charset="UTF-8">
     <title>Login </title>
     <link rel="stylesheet" href="~/css/Login.css">
+
 </head>
 <body>
+    
     <div class="login">
         <h2>Login</h2>
-        @*<form>
 
-            <div>
-                <input id="idEmail" type="text" name="" class="inputbox" placeholder="Email" />
-            </div>
-            <br>
-            <div>
-                <input id="idPassword" type="text" name="" class="inputbox" placeholder="Password" />
-            </div>
-            <br>
-            <div>
-                <input id="idLogin" type="button" />
-            </div>
-        </form><br>
 
-        <a href="~/Home/Register.cshtml">
-            <button>Register</button>
-        </a>*@
         @using (Html.BeginForm())
         {
         <fieldset>
-            <div class="inputbox">
-                @Html.LabelFor(m => m.Username)
-
-                @Html.TextBoxFor(m => m.Username)
+            <div>
+                @Html.TextBoxFor(m => m.Username, new { @class = "inputbox", @placeholder = "Email" })
             </div>
-            <div class="inputbox">
-                @Html.LabelFor(m => m.Password)
-                @Html.PasswordFor(m => m.Password)
+            <br />
+            <div>
+                @Html.PasswordFor(m => m.Password, new { @class = "inputbox", @placeholder = "Password" })
             </div>
-            <input type="submit" value="rEGISTER">
-
-         </fieldset>
+            <br />
+            <div>
+                <input type="submit" value="Login" class="button">
+            </div>
+        </fieldset>
         }
+    </div>
+
 </body>
 </html>
