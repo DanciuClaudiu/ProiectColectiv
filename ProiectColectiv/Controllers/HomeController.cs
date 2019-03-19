@@ -6,12 +6,31 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ProiectColectiv.Models;
 
+using FireSharp.Config;
+using FireSharp.EventStreaming;
+using FireSharp.Exceptions;
+using FireSharp.Extensions;
+using FireSharp.Interfaces;
+using FireSharp.Response;
+using FireSharp.Serialization;
+
 namespace ProiectColectiv.Controllers
 {
     public class HomeController : Controller
     {
+        IFirebaseConfig firebaseConfig = new FirebaseConfig
+        {
+            AuthSecret = "",
+            BasePath = ""
+        };
+
+        IFirebaseClient client;
+        
+
+
         public ActionResult Index()
         {
+
             return View();
         }
 
@@ -35,6 +54,8 @@ namespace ProiectColectiv.Controllers
             return View();
         }
 
+        
+
         [HttpGet]
         public ActionResult<User> Login()
         {
@@ -45,6 +66,9 @@ namespace ProiectColectiv.Controllers
         [HttpPost]
         public ActionResult<User> Login(User user )
         {
+
+            
+
             if (user.Username.Equals("admin") && user.Password.Equals("admin"))
             {
                 return RedirectToAction("UserMap", user);
