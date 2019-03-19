@@ -1,47 +1,10 @@
-﻿@model ProiectColectiv.Models.User
-@{
-    ViewData["Title"] = "Register";
+﻿@{
+    ViewData["Title"] = "Register Error";
 }
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Register </title>
-    <link rel="stylesheet" href="~/css/Register.css">
-</head>
-<body>
-    <div class="register">
-        <h2>Register</h2>
+<div class="text-center">
+    <h1 class="display-4"><b>SORRY</b></h1>
+    <p><b>Email or password not good.</b></p>
+    <p><b>Please <a href="https://localhost:44384/Register/Register">try again</a>.</b></p>
 
-
-        @using (Html.BeginForm())
-        {
-        <fieldset>
-            <div>
-                @Html.TextBoxFor(m => m.Email, new { @class = "inputbox", placeholder = "Email" })
-            </div>
-            <br />
-            <div>
-                @Html.PasswordFor(m => m.Password, new { @class = "inputbox", placeholder = "Password" })
-            </div>
-            <br />
-            <div>
-                @Html.TextBoxFor(m => m.Name, new { @class = "inputbox", placeholder = "Name" })
-            </div>
-            <br />
-            <div>
-                @Html.Label("Samthing wong","Sum Ting Wong",new { @class = "label" })
-            </div>
-            <br />
-            <div>
-                <input type="submit" value="Register" class="button">
-            </div>
-            <div>
-                <input type="submit" value="Login" class="button">
-            </div>
-        </fieldset>
-        }
-    </div>
-</body>
-</html>
+</div>
