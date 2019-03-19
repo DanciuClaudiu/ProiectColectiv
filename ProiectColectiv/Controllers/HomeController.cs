@@ -27,53 +27,10 @@ namespace ProiectColectiv.Controllers
         IFirebaseClient client;
         
 
-
         public ActionResult Index()
         {
 
             return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        public IActionResult Register()
-        {
-            return View();
-        }
-
-        public ActionResult UserMap(User user)
-        {
-            return View(user);
-        }
-
-        public IActionResult AdminMap()
-        {
-            return View();
-        }
-
-        
-
-        [HttpGet]
-        public ActionResult<User> Login()
-        {
-            var user=new User();
-            return View(user);
-        }
-
-        [HttpPost]
-        public ActionResult<User> Login(User user )
-        {
-
-            
-
-            if (user.Username.Equals("admin") && user.Password.Equals("admin"))
-            {
-                return RedirectToAction("UserMap", user);
-            }
-            return BadRequest("Bad Login.");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

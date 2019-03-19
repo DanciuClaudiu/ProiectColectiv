@@ -4,60 +4,58 @@
 }
 
 .register {
-    width: 350px;
     height: 400px;
+    left: 50%;
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
+    width: 350px;
 }
 
 h2 {
     font-family: "Segoe UI";
+    font-size: 2em;
+    margin-bottom: 50px;
+    margin-top: -50px;
     text-align: center;
     text-transform: uppercase;
-    font-size: 2em;
     word-spacing: 10px;
-    margin-top: -50px;
-    margin-bottom: 50px;
 }
 
 .inputbox {
-    width: calc(100% - 40px);
-    height: 30px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    box-sizing: border-box;
     display: block;
+    height: 30px;
     margin: auto;
     padding: 0 10px;
-    box-sizing: border-box;
-    border-left: none;
-    border-top: none;
-    border-right: none;
+    width: calc(100% - 40px);
 }
 
 ::placeholder {
-    letter-spacing: 2px;
     color: black;
+    letter-spacing: 2px;
 }
 
 button {
-    width: calc(100% - 40px);
-    height: 30px;
-    display: block;
-    margin: auto;
-    border: none;
     background-color: #0A84C6;
-    color: white;
+    border: none;
     border-radius: 12px;
+    color: white;
+    display: block;
+    height: 30px;
+    margin: auto;
+    width: calc(100% - 40px);
 }
 
 a {
-    text-decoration: none;
     color: white;
+    text-decoration: none;
 }
 
-button:hover {
-    background-color: #0da2f2
-}
+button:hover { background-color: #0da2f2 }
 
 button:active {
     background-color: #086191;
