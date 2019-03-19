@@ -4,8 +4,18 @@
 }
 <!DOCTYPE html>
 <style>
+     html, body, #map-container {
+        height: 100%;
+    }
+
     #mapid {
-        height: 380px;
+        height: 94vh;
+    }
+    .header {
+        position: absolute;
+        top: 9vh;
+        left: 80px;
+        z-index:401;
     }
 </style>
 <html lang="en">
@@ -19,10 +29,9 @@
           crossorigin="" />
 </head>
 <body>
-    <h1>
+    <h1 class="header">
         Hello, @Model.Username!
     </h1>
-
     <div id="mapid"></div>
 </body>
 </html>
