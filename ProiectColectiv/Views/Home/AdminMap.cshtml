@@ -31,7 +31,7 @@
 </head>
 <body>
     <h1 class="header">
-        Hello, @Model.Username!
+        Hello, @Model.Name!
     </h1>
     <div id="mapid"></div>
 </body>
@@ -51,6 +51,7 @@
         }).addTo(mymap);
 
     var marker = L.marker([46.770, 23.592]).addTo(mymap);
-    marker.bindPopup("Parcarea Adminului").openPopup();
+    marker.bindPopup("Parcarea Adminului");
+    L.marker([46.7825, 23.6880]).addTo(mymap).bindPopup("Parcarea lu varu!");
 
 </script>

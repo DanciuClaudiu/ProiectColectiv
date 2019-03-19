@@ -15,7 +15,7 @@ namespace ProiectColectiv.Controllers
         [HttpPost]
         public ActionResult Login(User user)
         {
-            if (user.Username.Equals("admin") && user.Password.Equals("admin"))
+            if (user.Email.Equals("admin") && user.Password.Equals("admin"))
             {
                 return RedirectToAction("AdminMap", "AdminMap", user);
             }

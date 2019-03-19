@@ -39,7 +39,7 @@ h2 {
     letter-spacing: 2px;
 }
 
-button {
+.button {
     background-color: #0A84C6;
     border: none;
     border-radius: 12px;
@@ -47,7 +47,18 @@ button {
     display: block;
     height: 30px;
     margin: auto;
+    margin-top: 15px;
     width: calc(100% - 40px);
+}
+.label{
+    border: none;
+    height: 30px;
+    display: block;
+    margin: auto;
+    text-align:center;
+    color:red;
+    width: calc(100% - 40px);
+
 }
 
 a {
