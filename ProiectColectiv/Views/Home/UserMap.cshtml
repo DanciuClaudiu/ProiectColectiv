@@ -27,7 +27,7 @@
 </head>
 <body>
 <h1 class="header">
-    Hello, @Model.Username!
+    Hello, @Model.Email!
 </h1>
 <div id="mapid"></div>
 </body>
@@ -47,6 +47,7 @@
         }).addTo(mymap);
 
     var marker = L.marker([46.770, 23.592]).addTo(mymap);
-    marker.bindPopup("Parcarea lui peste. Locurile libere:100, valoare:maxima").openPopup();
+    marker.bindPopup("Parcarea lui peste. Locurile libere:100, valoare:maxima");
+    L.marker([46.7825, 23.6880]).addTo(mymap).bindPopup("Parcarea lu varu!");
 
 </script>
