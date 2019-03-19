@@ -1,4 +1,4 @@
-﻿@model User
+﻿@model ProiectColectiv.Models.User
 @{
     ViewData["Title"] = "Login";
 }
@@ -12,26 +12,26 @@
 
 </head>
 <body>
-    
+
     <div class="login">
         <h2>Login</h2>
 
 
         @using (Html.BeginForm())
         {
-        <fieldset>
-            <div>
-                @Html.TextBoxFor(m => m.Username, new { @class = "inputbox", @placeholder = "Email" })
-            </div>
-            <br />
-            <div>
-                @Html.PasswordFor(m => m.Password, new { @class = "inputbox", @placeholder = "Password" })
-            </div>
-            <br />
-            <div>
-                <input type="submit" value="Login" class="button">
-            </div>
-        </fieldset>
+            <fieldset>
+                <div>
+                    @Html.TextBoxFor(m => m.Username, new { @class = "inputbox", placeholder = "Email" })
+                </div>
+                <br />
+                <div>
+                    @Html.PasswordFor(m => m.Password, new { @class = "inputbox", placeholder = "Password" })
+                </div>
+                <br />
+                <div>
+                    <input type="submit" value="Login" class="button">
+                </div>
+            </fieldset>
         }
     </div>
 

@@ -1,21 +1,18 @@
-﻿@model User
+﻿@model ProiectColectiv.Models.User
 @{
     ViewData["Title"] = "User Map";
 }
 <!DOCTYPE html>
 <style>
-     html, body, #map-container {
-        height: 100%;
-    }
+    html, body, #map-container { height: 100%; }
 
-    #mapid {
-        height: 94vh;
-    }
+    #mapid { height: 94vh; }
+
     .header {
+        left: 80px;
         position: absolute;
         top: 9vh;
-        left: 80px;
-        z-index:401;
+        z-index: 401;
     }
 </style>
 <html lang="en">
@@ -26,13 +23,13 @@
     <link rel="stylesheet" href="~/css/map.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
-          crossorigin="" />
+          crossorigin=""/>
 </head>
 <body>
-    <h1 class="header">
-        Hello, @Model.Username!
-    </h1>
-    <div id="mapid"></div>
+<h1 class="header">
+    Hello, @Model.Username!
+</h1>
+<div id="mapid"></div>
 </body>
 </html>
 <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
@@ -42,11 +39,12 @@
 <script>
     var mymap = L.map('mapid').setView([46.776, 23.594], 13);
 
-    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-        maxZoom: 18,
-        minZoom: 12,
-        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(mymap);
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png',
+        {
+            maxZoom: 18,
+            minZoom: 12,
+            attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(mymap);
 
     var marker = L.marker([46.770, 23.592]).addTo(mymap);
     marker.bindPopup("Parcarea lui peste. Locurile libere:100, valoare:maxima").openPopup();
